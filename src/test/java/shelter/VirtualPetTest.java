@@ -12,13 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VirtualPetTest {
     VirtualPetShelter underTest;
-    VirtualPet pet1;
+    VirtualPet pet1; //calling two pets
     VirtualPet pet2;
 
     @BeforeEach
     public void setUp() {
         underTest = new VirtualPetShelter();
-        pet1 = new VirtualPet("name1", "description", 80, 100, 100);
+        pet1 = new VirtualPet("name1", "description", 80, 100, 100); //parameters in the parentheses
         pet2 = new VirtualPet("name2", "description", 80, 100, 100);
 
     }
@@ -45,7 +45,7 @@ public class VirtualPetTest {
     public void shouldBeAbleToRemoveAPet() {
         underTest.add(pet1);
         underTest.remove(pet1);
-        VirtualPet retrievePet = underTest.findPet("name");
+        VirtualPet retrievePet = underTest.findPet("name"); //name is the primary key
         assertEquals(retrievePet, null);
 
     }

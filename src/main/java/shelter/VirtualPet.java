@@ -1,18 +1,19 @@
 package shelter;
 
-public class VirtualPet {
+public class VirtualPet { //the instance data is private
     private String petname;
     private String description;
     private int hunger = 80;
     private int thirst = 100;
     private int boredom = 100;
+    //use the code/generator/constructor
 
     public VirtualPet() {
 
     }
 
 
-    public String getShelterPet() {
+    public String getShelterPet() { //variable is created
         return petname;
 
     }
@@ -21,6 +22,9 @@ public class VirtualPet {
         return description;
     }
 
+    public String getname() {
+        return petname;
+    }
 
     public int getHunger() {
         return hunger;
@@ -66,7 +70,7 @@ public class VirtualPet {
 
 
     public void thirst() {
-        thirst += 2;
+        thirst += 4;
     }
 
     public void boredom() {
